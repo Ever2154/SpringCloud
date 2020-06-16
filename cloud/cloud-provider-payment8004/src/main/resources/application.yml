@@ -1,0 +1,10 @@
+server:
+  port: 8004
+  servlet:
+    context-path: /
+spring:
+  application:
+    name: cloud-payment-service
+  cloud:
+    zookeeper:
+      connect-string: 192.168.188.128:2181
