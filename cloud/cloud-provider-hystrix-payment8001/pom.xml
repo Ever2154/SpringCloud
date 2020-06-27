@@ -25,11 +25,7 @@
             <groupId>com.netflix.hystrix</groupId>
             <artifactId>hystrix-javanica</artifactId>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-netflix-hystrix-dashboard -->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-hystrix-dashboard</artifactId>
-        </dependency>
+
         <dependency>
             <groupId>com.example</groupId>
             <artifactId>cloud-api-common</artifactId>
