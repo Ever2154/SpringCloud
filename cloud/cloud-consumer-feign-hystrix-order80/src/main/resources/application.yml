@@ -2,7 +2,7 @@ server:
   port: 80
 spring:
   application:
-    name: OrderFeign80
+    name: OrderHystrixFeign80
 eureka:
   client:
     #false表示不同注册中心注册自己
@@ -20,12 +20,14 @@ eureka:
 feign:
   client:
     config:
-      cloud-payment-service:
+      cloud-hystrix-payment:
         #指的是建立连接所用的时间，适用于网络状况正常的情况下，两端连接所用的时间
-        connectTimeout: 5000
+        connectTimeout: 3000
         #指的是建立连接后从服务器读取到可用资源所用的时间
-        readTimeout: 5000
+        readTimeout: 4000
         loggerLevel: full
+  hystrix:
+    enabled: true
 logging:
   level:
     # Feign logging only responds to the DEBUG level.

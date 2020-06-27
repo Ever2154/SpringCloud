@@ -1,9 +1,8 @@
-package springcloud.controller;
+package com.atguigu.springcloud.springcloud.controller;
 
+import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.Resource;
@@ -17,15 +16,15 @@ import javax.annotation.Resource;
 @Slf4j
 @RestController
 @RequestMapping("/order")
+@Api("Controller")
 public class OrderController {
     //private static final String PAYMENT = "http://localhost:8001";
     private static final String PAYMENT = "http://cloud-payment-service";
     @Resource
     RestTemplate restTemplate;
 
-    @GetMapping("/consul")
-    public String info() {
-        return restTemplate.getForObject(PAYMENT + "/payment/consul",String.class);
+    @GetMapping("/zk")
+    public String add() {
+        return restTemplate.getForObject(PAYMENT + "/payment/zk", String.class);
     }
-
 }
