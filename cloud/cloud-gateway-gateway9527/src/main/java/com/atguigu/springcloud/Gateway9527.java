@@ -20,13 +20,14 @@ public class Gateway9527 {
     }
     @Bean
     public RouteLocator myRoutes(RouteLocatorBuilder builder) {
-        return builder.routes()
+/*        return builder.routes()
                 .route(p->p.path("/get")
                         .filters(f->f.addRequestHeader("Hello","World"))
                         .uri("http://httpbin.org:80"))
                 .route(p->p.host("*.hystrix.com")
                         .filters(f->f.hystrix(config -> config.setName("mycmd")))
                         .uri("http://httpbin.org:80"))
-                        .build();
+                        .build();*/
+        return builder.routes().route("route1",r->r.path("/").uri("http://news.baidu.com/guonei")).build();
     }
 }

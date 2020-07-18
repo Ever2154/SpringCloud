@@ -7,6 +7,7 @@ import com.netflix.discovery.EurekaClient;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import lombok.extern.slf4j.Slf4j;
@@ -23,7 +24,7 @@ import java.util.List;
  */
 @Slf4j
 @RestController
-@RequestMapping("/payment")
+@RequestMapping(value="/payment",produces = MediaType.APPLICATION_JSON_VALUE)
 @Api("Controller")
 public class PaymentController {
 

@@ -1,0 +1,38 @@
+server:
+  port: 3444
+
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          #跳过SSL
+          skipSslValidation: true
+          #github上面git仓库链接
+          uri: https://github.com/Ever2154/SpringCloud-Config.git
+          #搜索目录
+          search-paths:
+            - SpringCloud-Config
+      #读取分支 其他分支也能读到
+      label: master
+  application:
+    name: cloud-config-center #注册进eureka的服务名
+  #rabbitmq 配置
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+#服务注册进eureka
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka
+
+#暴露bus/refresh端点
+management:
+  endpoints:
+    web:
+      exposure:
+        #定点通知:.../applicationName+port({destination})
+        include: "bus-refresh" #curl -X POST http://localhost:3444/actuator/bus-refresh
