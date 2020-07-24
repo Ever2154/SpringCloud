@@ -6,15 +6,15 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 /**
- * @ClassNameMainPayment9001
+ * @ClassNameMainPayment9002
  * @Description
  * @Author 黄皓
- * @Date2020/7/20 11:16
+ * @Date2020/7/24 17:20
  **/
-@SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
+@SpringBootApplication (exclude = DataSourceAutoConfiguration.class)
 @EnableDiscoveryClient
-public class MainPayment9001 {
+public class MainPayment9002 {
     public static void main(String[] args) {
-        SpringApplication.run(MainPayment9001.class,args);
+       SpringApplication.run(MainPayment9002.class,args);
     }
 }
