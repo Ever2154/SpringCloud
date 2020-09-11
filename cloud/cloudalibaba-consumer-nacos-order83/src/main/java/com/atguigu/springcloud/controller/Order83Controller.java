@@ -26,7 +26,7 @@ public class Order83Controller {
     RestTemplate restTemplate;
 
     @RequestMapping("/nacos/order/{id}")
-    public String pay(@PathVariable("id") Integer id){
-        return restTemplate.getForObject(SERVICE_NAME+"/nacos/pay/"+id,String.class);
+    public String pay(@PathVariable("id") Integer id) {
+        return restTemplate.getForObject(SERVICE_NAME + "/nacos/pay/" + id, String.class);
     }
 }

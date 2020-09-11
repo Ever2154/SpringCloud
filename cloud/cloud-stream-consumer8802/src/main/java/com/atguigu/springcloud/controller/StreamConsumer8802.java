@@ -31,7 +31,7 @@ public class StreamConsumer8802 {
 
     @StreamListener(Sink.INPUT)
     //TODO 接收不到消息
-    public void input(Message<String> msg){
-        System.out.println("serverPort:"+serverPort+",接收消息:"+msg.getPayload());
+    public void input(Message<String> msg) {
+        System.out.println("serverPort:" + serverPort + ",接收消息:" + msg.getPayload());
     }
 }

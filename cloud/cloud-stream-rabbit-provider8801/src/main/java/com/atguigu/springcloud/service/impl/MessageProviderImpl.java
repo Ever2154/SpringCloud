@@ -21,11 +21,12 @@ public class MessageProviderImpl implements MessageProvider {
 
     @Resource
     private MessageChannel output;//消息发送管道
+
     @Override
     public String send() {
-        String serial= UUID.randomUUID().toString();
+        String serial = UUID.randomUUID().toString();
         output.send(MessageBuilder.withPayload(serial).build());
-        System.out.println("---->serial:"+serial+"<----");
+        System.out.println("---->serial:" + serial + "<----");
         return serial;
     }
 }

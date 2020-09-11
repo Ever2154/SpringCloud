@@ -11,10 +11,10 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  * @Author 黄皓
  * @Date2020/7/24 17:20
  **/
-@SpringBootApplication (exclude = DataSourceAutoConfiguration.class)
+@SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
 @EnableDiscoveryClient
 public class MainPayment9002 {
     public static void main(String[] args) {
-       SpringApplication.run(MainPayment9002.class,args);
+        SpringApplication.run(MainPayment9002.class, args);
     }
 }

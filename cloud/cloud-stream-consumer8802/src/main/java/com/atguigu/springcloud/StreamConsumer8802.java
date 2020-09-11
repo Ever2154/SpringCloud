@@ -16,6 +16,6 @@ import org.springframework.cloud.stream.messaging.Sink;
 
 public class StreamConsumer8802 {
     public static void main(String[] args) {
-        SpringApplication.run(StreamConsumer8802.class,args);
+        SpringApplication.run(StreamConsumer8802.class, args);
     }
 }

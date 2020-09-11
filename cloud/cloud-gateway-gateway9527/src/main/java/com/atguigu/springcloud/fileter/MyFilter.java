@@ -22,16 +22,17 @@ public class MyFilter implements GlobalFilter, Ordered {
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
         log.info("=====进入自定义过滤器=====");
-        String value=exchange.getRequest().getQueryParams().getFirst("user");
-        if(value==null){
+        String value = exchange.getRequest().getQueryParams().getFirst("user");
+        if (value == null) {
             log.info("=====null用户=====");
             exchange.getResponse().setStatusCode(HttpStatus.NOT_FOUND);
             return exchange.getResponse().setComplete();
         }
-        log.info("=====user:"+value+"=====");
+        log.info("=====user:" + value + "=====");
         log.info("=====退出自定义过滤器=====");
         return chain.filter(exchange);
     }
+
     @Override
     public int getOrder() {
         return 0;

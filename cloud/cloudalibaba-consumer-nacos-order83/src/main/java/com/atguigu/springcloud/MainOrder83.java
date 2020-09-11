@@ -18,12 +18,12 @@ import org.springframework.web.client.RestTemplate;
 @EnableDiscoveryClient
 public class MainOrder83 {
     public static void main(String[] args) {
-        SpringApplication.run(MainOrder83.class,args);
+        SpringApplication.run(MainOrder83.class, args);
     }
 
     @Bean
     @LoadBalanced
-    public RestTemplate getRestTemplate(){
+    public RestTemplate getRestTemplate() {
         return new RestTemplate();
     }
 }

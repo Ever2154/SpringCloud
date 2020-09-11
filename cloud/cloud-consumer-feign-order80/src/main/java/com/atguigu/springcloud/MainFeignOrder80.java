@@ -15,6 +15,6 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @EnableFeignClients
 public class MainFeignOrder80 {
     public static void main(String[] args) {
-        SpringApplication.run(MainFeignOrder80.class,args);
+        SpringApplication.run(MainFeignOrder80.class, args);
     }
 }

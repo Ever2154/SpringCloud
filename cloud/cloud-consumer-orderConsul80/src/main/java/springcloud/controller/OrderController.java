@@ -25,7 +25,7 @@ public class OrderController {
 
     @GetMapping("/consul")
     public String info() {
-        return restTemplate.getForObject(PAYMENT + "/payment/consul",String.class);
+        return restTemplate.getForObject(PAYMENT + "/payment/consul", String.class);
     }
 
 }

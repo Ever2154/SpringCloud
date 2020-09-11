@@ -16,8 +16,9 @@ import org.springframework.context.annotation.Bean;
 @SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
 public class Gateway9527 {
     public static void main(String[] args) {
-        SpringApplication.run(Gateway9527.class,args);
+        SpringApplication.run(Gateway9527.class, args);
     }
+
     @Bean
     public RouteLocator myRoutes(RouteLocatorBuilder builder) {
 /*        return builder.routes()
@@ -28,6 +29,6 @@ public class Gateway9527 {
                         .filters(f->f.hystrix(config -> config.setName("mycmd")))
                         .uri("http://httpbin.org:80"))
                         .build();*/
-        return builder.routes().route("route1",r->r.path("/").uri("http://news.baidu.com/guonei")).build();
+        return builder.routes().route("route1", r -> r.path("/").uri("http://news.baidu.com/guonei")).build();
     }
 }

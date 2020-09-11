@@ -18,6 +18,6 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 public class MainHystrixFeignOrder80 {
     public static void main(String[] args) {
-        SpringApplication.run(MainHystrixFeignOrder80.class,args);
+        SpringApplication.run(MainHystrixFeignOrder80.class, args);
     }
 }

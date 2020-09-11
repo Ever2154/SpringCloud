@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
  * @Date2020/6/24 15:55
  **/
 @Component
-public class PaymentFallBack implements PaymentFeignService{
+public class PaymentFallBack implements PaymentFeignService {
     @Override
     public String paymentInfo_OK(int id) {
         return "PaymentFallBack-->paymentInfo_OK";

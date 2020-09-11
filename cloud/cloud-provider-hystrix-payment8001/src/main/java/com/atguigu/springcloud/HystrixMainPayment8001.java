@@ -18,7 +18,7 @@ import org.springframework.context.annotation.Bean;
 @EnableHystrix
 public class HystrixMainPayment8001 {
     public static void main(String[] args) {
-        SpringApplication.run(HystrixMainPayment8001.class,args);
+        SpringApplication.run(HystrixMainPayment8001.class, args);
     }
 
     /**
@@ -27,9 +27,9 @@ public class HystrixMainPayment8001 {
      * 只要在自己的项目里配置上下面的servlet就可以了
      */
     @Bean
-    ServletRegistrationBean getBean(){
-        HystrixMetricsStreamServlet streamServlet=new HystrixMetricsStreamServlet();
-        ServletRegistrationBean registrationBean=new ServletRegistrationBean(streamServlet);
+    ServletRegistrationBean getBean() {
+        HystrixMetricsStreamServlet streamServlet = new HystrixMetricsStreamServlet();
+        ServletRegistrationBean registrationBean = new ServletRegistrationBean(streamServlet);
         registrationBean.addUrlMappings("/hystrix.stream");
         registrationBean.setName("HystrixMetricsStreamServlet");
         return registrationBean;

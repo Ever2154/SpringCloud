@@ -18,8 +18,9 @@ import java.util.UUID;
 public class PaymentController {
     @Value("${server.port}")
     private String serverPort;
+
     @GetMapping("/zk")
-    public String info(){
-        return "spring-cloud-zk,port:"+serverPort+ UUID.randomUUID();
+    public String info() {
+        return "spring-cloud-zk,port:" + serverPort + UUID.randomUUID();
     }
 }

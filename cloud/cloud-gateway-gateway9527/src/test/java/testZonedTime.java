@@ -8,7 +8,7 @@ import java.time.ZonedDateTime;
  **/
 public class testZonedTime {
     public static void main(String[] args) {
-        ZonedDateTime now=ZonedDateTime.now();
+        ZonedDateTime now = ZonedDateTime.now();
         System.out.println(now);
     }
 }

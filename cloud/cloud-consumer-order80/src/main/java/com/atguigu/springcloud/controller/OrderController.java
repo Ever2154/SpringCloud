@@ -49,12 +49,12 @@ public class OrderController {
 
         ResponseEntity<CommonResult> entity = restTemplate.getForEntity(PAYMENT + "/payment/find/" + id, CommonResult.class);
 
-        return new CommonResult<>(entity.getStatusCodeValue(),"msg",entity.getBody().getData());
+        return new CommonResult<>(entity.getStatusCodeValue(), "msg", entity.getBody().getData());
     }
 
     @GetMapping("/lb")
     public String getPaymentLB() {
         ServiceInstance serviceInstance = loadBalancer.instances(discoveryClient.getInstances("cloud-payment-service"));
-        return restTemplate.getForObject(serviceInstance.getUri()+"/payment/lb",String.class);
+        return restTemplate.getForObject(serviceInstance.getUri() + "/payment/lb", String.class);
     }
 }

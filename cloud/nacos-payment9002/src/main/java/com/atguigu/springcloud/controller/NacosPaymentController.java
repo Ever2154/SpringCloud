@@ -18,7 +18,7 @@ public class NacosPaymentController {
     private String serverPort;
 
     @RequestMapping("/nacos/pay/{id}")
-    public String pay(@PathVariable("id") Integer id){
-        return "nacos->Payment9002->port:"+serverPort+"->id:"+id;
+    public String pay(@PathVariable("id") Integer id) {
+        return "nacos->Payment9002->port:" + serverPort + "->id:" + id;
     }
 }

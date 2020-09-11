@@ -14,6 +14,6 @@ import org.springframework.util.SystemPropertyUtils;
 public class MainNacosConfig {
     public static void main(String[] args) {
         //System.setProperty("spring.cloud.bootstrap.enabled","false");
-        SpringApplication.run(MainNacosConfig.class,args);
+        SpringApplication.run(MainNacosConfig.class, args);
     }
 }

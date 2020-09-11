@@ -21,7 +21,7 @@ public class ProviderController {
     MessageProvider messageProvider;
 
     @RequestMapping("/send")
-    public String sendMsg(){
+    public String sendMsg() {
         return messageProvider.send();
     }
 }
