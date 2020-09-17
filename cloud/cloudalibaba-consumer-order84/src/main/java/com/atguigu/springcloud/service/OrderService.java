@@ -15,5 +15,5 @@ import org.springframework.web.bind.annotation.PathVariable;
 @FeignClient(value = "cloudalibaba-payment-service",fallback = OrderServiceFallback.class)
 public interface OrderService {
     @GetMapping("/payment/find/{id}")
-    CommonResult<Payment> find(@PathVariable int id);
+    CommonResult<Payment> find(int id);
 }

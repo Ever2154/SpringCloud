@@ -1,0 +1,23 @@
+server:
+  port: 9091
+spring:
+  application:
+    name: order-service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.168.128:1111
+    alibaba:
+      seata:
+        tx-service-group: order-service-group
+  datasource:
+    url: jdbc:mysql://192.168.168.128:3306/seata_order?serverTimezone=Asia/Shanghai
+    username: root
+    password: root
+logging:
+  level:
+    io:
+      seata: debug
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
